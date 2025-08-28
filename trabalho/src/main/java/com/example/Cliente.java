@@ -1,3 +1,4 @@
+package trabalho.src.main.java.com.example;
 public class Cliente {
 
     private String nome;
