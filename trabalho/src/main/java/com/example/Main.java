@@ -6,6 +6,7 @@ public class Main {
 
         //Lembrar de trazer de volta!
         //TelaMenu telaMenu = new TelaMenu();
+        //TelaInicial telaInicial = new TelaInicial(); // retirar depois
 
         System.out.print("Digite o nome do cliente: ");
         String nome = scanner.nextLine();
