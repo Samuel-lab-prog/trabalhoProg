@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class ClienteDao {
 
-    String ip = "localhost";
-    String port = "5432";
-    String db = "trabalhoprog3";
-    String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
-    String usuario = "postgres";
-    String senha = "";
+    final String ip = "localhost";
+    final String port = "5432";
+    final String db = "trabalhoprog3";
+    final String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
+    final String usuario = "postgres";
+    final String senha = "";
 
     Connection conexao = null;
 
