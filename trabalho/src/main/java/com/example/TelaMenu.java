@@ -14,12 +14,14 @@ public class TelaMenu extends JFrame implements ActionListener {
     private JTextField nomeDig = new JTextField();
     private JButton botaoEntar = new JButton("Entar");
     private JButton botaoSair = new JButton("Sair");
-    private JLabel fundo = new JLabel(new ImageIcon("imagens/fundoMenu.png"));
+    private JButton botaoTrocarS = new JButton("Trocar S");
+    private JLabel fundo = new JLabel(new ImageIcon("imagens/fundoMenu.gif"));
 
-    private String usuario[] = {"william", "leonel", "samuel"};
-    private String senhas[] = {"EuAmoProg", "MinhaSenha123", "123"};
+    private String usuario[] = {"william", "leonel", "samuel", "jose"};
+    private String senhas[] = {"EuAmoProg", "MinhaSenha123", "123", "321"};
 
     public TelaMenu() {
+
         setContentPane(fundo);
         getContentPane().add(titulo);
         getContentPane().add(localSenha);
@@ -28,6 +30,7 @@ public class TelaMenu extends JFrame implements ActionListener {
         getContentPane().add(nomeDig);
         getContentPane().add(botaoEntar);
         getContentPane().add(botaoSair);
+        getContentPane().add(botaoTrocarS);
         getContentPane().add(textoDeAviso);
 
         fundo.setLayout(null);
@@ -44,6 +47,7 @@ public class TelaMenu extends JFrame implements ActionListener {
         senhaDig.setBounds(255, 255, 300, 20);
         botaoEntar.setBounds(260, 340, 100, 40);
         botaoSair.setBounds(440, 340, 100, 40);
+        botaoTrocarS.setBounds(350, 400, 100, 40);
         textoDeAviso.setBounds(255, 285, 250, 30);
 
         botaoEntar.addActionListener(this);
@@ -65,7 +69,7 @@ public class TelaMenu extends JFrame implements ActionListener {
         if (e.getSource() == botaoEntar) {
 
             boolean verificarEntrada = false;
-            int verificarSituacao = 0;
+            int verificarSituacao = 0, verificarSituacao2 = 0;
 
             if (nomeDig.getText().equals("") && senhaDig.getText().equals("")) {
                 textoDeAviso.setText("Nao foi digitado nome e senha!");
@@ -80,30 +84,47 @@ public class TelaMenu extends JFrame implements ActionListener {
 
             switch(verificarSituacao) {
                 case 0:
-                    if (nomeDig.getText().equals(usuario[0]) && senhaDig.getText().equals(senhas[0])) {
-                        verificarEntrada = true;
-                    } else if (nomeDig.getText().equals(usuario[1]) && senhaDig.getText().equals(senhas[1])) {
-                        verificarEntrada = true;
-                    } else if (nomeDig.getText().equals(usuario[2]) && senhaDig.getText().equals(senhas[2])) {
-                        verificarEntrada = true;
-                    } else {
-                        System.out.println("System: > Policial nao registrado no sistema, por favor fale com o administrador do sistema! <");
-                        textoDeAviso.setText("Usuario nao registrado no sistema!");
+
+                    for (int i = 0; i < usuario.length; i++) {
+                        if(nomeDig.getText().equals(usuario[i]) && senhaDig.getText().equals(senhas[i])) {
+                            verificarEntrada = true;
+                            verificarSituacao2 = 1;
+                        }
+                        else{
+                            System.out.println("System: > Procurando.. <");
+
+                        }
                     }
+
+                    if(verificarSituacao2 == 1){
+                        System.out.println("System: > Encontramos voce em nosso sistema! <");
+                    }
+                    else{
+                        textoDeAviso.setText("Usuario nao registrado no sistema!");
+                        System.out.println("System: > Nao registrado no sistema, por favor fale com o administrador do sistema! <");
+                    }
+
                     break;
                 case 1:
                     System.out.println("System: > Nao rodar o sistemqa de verificacao de usuario! <");
                     break;
             }
 
-
             textoDeAviso.setVisible(true);
 
             if (verificarEntrada == true) {
                 System.out.println("System > Bem vindo usuario " + nomeDig.getText() + " <");
+                TelaInicial telaInicial = new TelaInicial();
+                telaInicial.setVisible(true);
+                dispose();
             } else {
                 System.out.println("System: > Voce foi bloqueado de entrar! <");
             }
+        }
+        if(e.getSource() == botaoTrocarS){
+            TelaReconectar telaReconectar = new TelaReconectar();
+            setVisible(false);
+            telaReconectar.setVisible(true);
         }
         if(e.getSource() == botaoSair) {
             System.exit(0);
