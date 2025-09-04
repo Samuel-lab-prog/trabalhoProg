@@ -4,7 +4,7 @@ CREATE TABLE Cliente(
     endereco varchar(50) NOT NULL,
     telefone char(14) NOT NULL,
     email varchar(50) NOT NULL,
-    dataNascimento char(8) NOT NOT NULL,
+    dataNascimento char(8) NOT NULL,
     CONSTRAINT "ClientePK" PRIMARY KEY(cpf)
 
 )
