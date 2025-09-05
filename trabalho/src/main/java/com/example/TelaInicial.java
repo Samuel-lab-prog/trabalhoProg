@@ -1,11 +1,14 @@
 package trabalho.src.main.java.com.example;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TelaInicial extends JFrame implements ActionListener {
 
+    private JTextArea nome = new JTextArea("Humberto");
+    private JLabel nomeImagem = new JLabel();
     private JButton botaoCadastar = new JButton("Tela Cadastrar");
     private JButton botaoAlterar = new JButton("Tela Alterar");
     private JButton botaoExcluir = new JButton("Tela Excluir");
@@ -14,7 +17,9 @@ public class TelaInicial extends JFrame implements ActionListener {
     private JLabel fundo = new JLabel(new ImageIcon("imagens/fundoMenu.gif"));
     public TelaInicial() {
 
+
         setContentPane(fundo);
+        getContentPane().add(nome);
         getContentPane().add(botaoCadastar);
         getContentPane().add(botaoAlterar);
         getContentPane().add(botaoExcluir);
@@ -29,22 +34,29 @@ public class TelaInicial extends JFrame implements ActionListener {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        botaoCadastar.setBounds(0, 0, 800, 60);
-        botaoAlterar.setBounds(0, 0, 800, 60);
-        botaoExcluir.setBounds(0, 0, 800, 60);
-        botaoPesquisar.setBounds(0, 0, 800, 60);
-        botaoSair.setBounds(0, 0, 800, 60);
+        botaoCadastar.setBounds(0, 80, 150, 60);
+        botaoAlterar.setBounds(0, 160, 150, 60);
+        botaoExcluir.setBounds(0, 240, 150, 60);
+        botaoPesquisar.setBounds(0, 320, 150, 60);
+        botaoSair.setBounds(0, 400, 150, 60);
+        nome.setBounds(550, 120,150, 30);
 
         botaoCadastar.addActionListener(this);
         botaoAlterar.addActionListener(this);
         botaoExcluir.addActionListener(this);
         botaoPesquisar.addActionListener(this);
 
-        botaoCadastar.setVisible(false);
-        botaoAlterar.setVisible(false);
-        botaoExcluir.setVisible(false);
-        botaoPesquisar.setVisible(false);
-        botaoSair.setVisible(false);
+        nome.setFont( new Font("Georgia", Font.BOLD, 25));
+        nome.setEditable(false);
+        nome.setOpaque(false);
+        nome.setFocusable(false);
+
+        botaoCadastar.setVisible(true);
+        botaoAlterar.setVisible(true);
+        botaoExcluir.setVisible(true);
+        botaoPesquisar.setVisible(true);
+        botaoSair.setVisible(true);
+        nome.setVisible(true);
     }
 
     @Override
