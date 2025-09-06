@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 
 public class TelaMenu extends JFrame implements ActionListener {
 
+    ClienteDao clienteDAO;
+    Cliente cliente;
     private JLabel textoDeAviso = new JLabel("Aviso");
     private JLabel titulo = new JLabel("Menu");
     private JLabel localSenha = new JLabel("Senha: ");
@@ -52,6 +54,7 @@ public class TelaMenu extends JFrame implements ActionListener {
 
         botaoEntar.addActionListener(this);
         botaoSair.addActionListener(this);
+        botaoTrocarS.addActionListener(this);
 
         titulo.setVisible(false);
         localSenha.setVisible(true);
@@ -86,11 +89,10 @@ public class TelaMenu extends JFrame implements ActionListener {
                 case 0:
 
                     for (int i = 0; i < usuario.length; i++) {
-                        if(nomeDig.getText().equals(usuario[i]) && senhaDig.getText().equals(senhas[i])) {
+                        if (nomeDig.getText().equals(usuario[i]) && senhaDig.getText().equals(senhas[i])) {
                             verificarEntrada = true;
                             verificarSituacao2 = 1;
-                        }
-                        else{
+                        } else {
                             System.out.println("System: > Procurando.. <");
 
                         }
@@ -108,8 +110,7 @@ public class TelaMenu extends JFrame implements ActionListener {
                 case 1:
                     System.out.println("System: > Nao rodar o sistemqa de verificacao de usuario! <");
                     break;
-            }
-
+                }
             textoDeAviso.setVisible(true);
 
             if (verificarEntrada == true) {
@@ -123,8 +124,8 @@ public class TelaMenu extends JFrame implements ActionListener {
         }
         if(e.getSource() == botaoTrocarS){
             TelaReconectar telaReconectar = new TelaReconectar();
-            setVisible(false);
             telaReconectar.setVisible(true);
+            setVisible(false);
         }
         if(e.getSource() == botaoSair) {
             System.exit(0);
