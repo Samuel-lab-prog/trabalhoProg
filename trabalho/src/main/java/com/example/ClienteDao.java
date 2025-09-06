@@ -28,7 +28,9 @@ public class ClienteDao {
         String sql = "INSERT INTO clientes (nome, cpf, endereco, telefone, email, dataNascimento) "
                 + "VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement comando = conexao.prepareStatement(sql)) {
+        try {
+            Connection conexao = DriverManager.getConnection(url,usuario,senha);
+            PreparedStatement comando = conexao.prepareStatement(sql);
             comando.setString(1, cliente.getNome());
             comando.setString(2, cliente.getCpf());
             comando.setString(3, cliente.getEndereco());
