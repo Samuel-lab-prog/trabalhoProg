@@ -1,4 +1,4 @@
-package trabalho.src.main.java.com.example;
+package com.example;
 
 import javax.swing.*;
 import java.awt.*;
