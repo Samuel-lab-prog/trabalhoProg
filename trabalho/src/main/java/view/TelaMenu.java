@@ -1,6 +1,10 @@
-package com.example;
+package view;
 
 import javax.swing.*;
+
+import dao.ClienteDao;
+import model.Cliente;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

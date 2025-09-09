@@ -1,4 +1,4 @@
-package com.example;
+package view;
 
 import javax.swing.*;
 

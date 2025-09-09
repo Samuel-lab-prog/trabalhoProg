@@ -1,4 +1,4 @@
-package com.example;
+package view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 public class TelaInicial extends JFrame implements ActionListener {
 
     private JTextArea nome = new JTextArea("Humberto");
-    private JLabel nomeImagem = new JLabel();
     private JButton botaoCadastar = new JButton("Tela Cadastrar");
     private JButton botaoAlterar = new JButton("Tela Alterar");
     private JButton botaoExcluir = new JButton("Tela Excluir");
