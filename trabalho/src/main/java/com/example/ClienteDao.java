@@ -1,4 +1,4 @@
-package trabalho.src.main.java.com.example;
+package com.example;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class ClienteDao {
 
-    String ip = "localhost";
-    String port = "5432";
-    String db = "trabalhoprog3";
-    String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
-    String usuario = "postgres";
-    String senha = "";
+    private String ip = "localhost";
+    private String port = "5432";
+    private String db = "trbalhoprog3";
+    private String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
+    private String usuario = "postgres";
+    private String senha = "postgres";
 
     Connection conexao = null;
 
@@ -25,7 +25,7 @@ public class ClienteDao {
     }
 
     public void adicionaCliente(Cliente cliente) {
-        String sql = "INSERT INTO clientes (nome, cpf, endereco, telefone, email, dataNascimento) "
+        String sql = "INSERT INTO cliente (nome, cpf, endereco, telefone, email, dataNascimento) "
                 + "VALUES (?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement comando = conexao.prepareStatement(sql)) {
@@ -34,7 +34,7 @@ public class ClienteDao {
             comando.setString(3, cliente.getEndereco());
             comando.setString(4, cliente.getTelefone());
             comando.setString(5, cliente.getEmail());
-            comando.setString(6, cliente.toString());
+            comando.setString(6, cliente.getDataNascimento());
 
             comando.executeUpdate();
             System.out.println("Cliente adicionado com sucesso!");

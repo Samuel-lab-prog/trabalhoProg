@@ -1,4 +1,4 @@
-package trabalho.src.main.java.com.example;
+package com.example;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -25,8 +25,6 @@ public class Main {
         Cliente cliente = new Cliente(nome, cpf, endereco, telefone, email, dataNascimento);
         ClienteDao clienteDao = new ClienteDao();
         clienteDao.adicionaCliente(cliente);
-        Cliente cliente2 = cliente;
-        System.out.println(cliente2.toString());
         clienteDao.fecharConexao();
         scanner.close();
 
