@@ -8,6 +8,6 @@ William Ramos Moreira -           https://github.com/williamRamosM
 
 Leonel Dalpias - 
 
-José Bernardo -
+José Bernardo -                   https://github.com/Bernardin21 
 
 

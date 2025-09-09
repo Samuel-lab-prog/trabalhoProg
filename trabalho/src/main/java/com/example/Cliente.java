@@ -8,6 +8,10 @@ public class Cliente {
     private String email;
     private String dataNascimento;
 
+    public Cliente() {
+
+    }
+
     public Cliente(String nome, String cpf, String endereco, String telefone, String email, String dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;

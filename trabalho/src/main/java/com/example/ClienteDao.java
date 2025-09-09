@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class ClienteDao {
 
-    private String ip = "localhost";
-    private String port = "5432";
-    private String db = "trbalhoprog3";
-    private String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
-    private String usuario = "postgres";
-    private String senha = "postgres";
+    final private String ip = "localhost";
+    final private String port = "5432";
+    final private String db = "trbalhoprog3";
+    final private String url = "jdbc:postgresql://" + ip + ":" + port + "/" + db;
+    final private String usuario = "postgres";
+    final private String senha = "postgres";
 
     Connection conexao = null;
 
@@ -28,7 +28,9 @@ public class ClienteDao {
         String sql = "INSERT INTO cliente (nome, cpf, endereco, telefone, email, dataNascimento) "
                 + "VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement comando = conexao.prepareStatement(sql)) {
+        try {
+            Connection conexao = DriverManager.getConnection(url,usuario,senha);
+            PreparedStatement comando = conexao.prepareStatement(sql);
             comando.setString(1, cliente.getNome());
             comando.setString(2, cliente.getCpf());
             comando.setString(3, cliente.getEndereco());
