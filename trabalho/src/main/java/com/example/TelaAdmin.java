@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TelaInicial extends JFrame implements ActionListener {
-
+public class TelaAdmin extends JFrame implements ActionListener {
+    
     private JTextArea nome = new JTextArea("Humberto");
     private JLabel nomeImagem = new JLabel();
     private JButton botaoCadastar = new JButton("Tela Cadastrar");
@@ -15,7 +15,7 @@ public class TelaInicial extends JFrame implements ActionListener {
     private JButton botaoPesquisar = new JButton("Tela Pesquisar");
     private JButton botaoSair = new JButton("Sair");
     private JLabel fundo = new JLabel(new ImageIcon("imagens/fundoMenu.gif"));
-    public TelaInicial() {
+    public TelaAdmin() {
 
 
         setContentPane(fundo);
