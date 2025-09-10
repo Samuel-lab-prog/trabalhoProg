@@ -1,4 +1,8 @@
+<<<<<<< HEAD:trabalho/src/main/java/com/example/TelaReconectar.java
 package com.example;
+=======
+package view;
+>>>>>>> 6a8a55305b8e1f582d191ca580a3c0938a76fff3:trabalho/src/main/java/view/TelaReconectar.java
 
 import javax.swing.*;
 

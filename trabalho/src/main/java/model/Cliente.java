@@ -1,4 +1,8 @@
+<<<<<<< HEAD:trabalho/src/main/java/com/example/Cliente.java
 package com.example;
+=======
+package model;
+>>>>>>> 6a8a55305b8e1f582d191ca580a3c0938a76fff3:trabalho/src/main/java/model/Cliente.java
 public class Cliente {
 
     private String nome;

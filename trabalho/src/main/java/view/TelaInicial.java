@@ -1,4 +1,8 @@
+<<<<<<< HEAD:trabalho/src/main/java/com/example/TelaInicial.java
 package com.example;
+=======
+package view;
+>>>>>>> 6a8a55305b8e1f582d191ca580a3c0938a76fff3:trabalho/src/main/java/view/TelaInicial.java
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +12,6 @@ import java.awt.event.ActionListener;
 public class TelaInicial extends JFrame implements ActionListener {
 
     private JTextArea nome = new JTextArea("Humberto");
-    private JLabel nomeImagem = new JLabel();
     private JButton botaoCadastar = new JButton("Tela Cadastrar");
     private JButton botaoAlterar = new JButton("Tela Alterar");
     private JButton botaoExcluir = new JButton("Tela Excluir");

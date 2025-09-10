@@ -1,6 +1,14 @@
+<<<<<<< HEAD:trabalho/src/main/java/com/example/TelaMenu.java
 package com.example;
+=======
+package view;
+>>>>>>> 6a8a55305b8e1f582d191ca580a3c0938a76fff3:trabalho/src/main/java/view/TelaMenu.java
 
 import javax.swing.*;
+
+import dao.ClienteDao;
+import model.Cliente;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
