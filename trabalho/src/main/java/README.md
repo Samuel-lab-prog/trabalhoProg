@@ -4,7 +4,7 @@ Nomes:
 
 Samuel Gomes -
 
-Will i am ramoz Moreira -           https://github.com/williamRamosM
+William Ramos Moreira -           https://github.com/williamRamosM
 
 Leonel Dalpiaz - 
 
