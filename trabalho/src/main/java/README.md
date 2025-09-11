@@ -4,9 +4,9 @@ Nomes:
 
 Samuel Gomes -
 
-William Ramos Moreira -           https://github.com/williamRamosM
+Will i am ramoz Moreira -           https://github.com/williamRamosM
 
-Leonel Dalpias - 
+Leonel Dalpiaz - 
 
 José Bernardo -                   https://github.com/Bernardin21 
 
